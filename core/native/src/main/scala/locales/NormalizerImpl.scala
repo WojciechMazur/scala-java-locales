@@ -39,14 +39,14 @@ private object NormalizerImpl {
       val bb      = encoder.encode(cb)
 
       val n    = bb.limit()
-      val cstr = z.alloc((n + 1).toULong)
+      val cstr = z.alloc((n + 1).toUSize)
 
       var i = 0
       while (i < n) {
-        !(cstr + i.toLong) = bb.get(i)
+        !(cstr + i.toUSize) = bb.get(i)
         i += 1
       }
-      !(cstr + i.toLong) = 0.toByte
+      !(cstr + i.toUSize) = 0.toByte
 
       cstr
   }

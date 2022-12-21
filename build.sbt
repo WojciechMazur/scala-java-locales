@@ -2,7 +2,7 @@ import locales._
 import sbt.Keys._
 import sbtcrossproject.CrossPlugin.autoImport.{ CrossType, crossProject }
 
-lazy val cldrApiVersion = "4.0.0"
+lazy val cldrApiVersion = "4.2.0"
 
 ThisBuild / versionScheme := Some("always")
 
@@ -56,6 +56,7 @@ val commonSettings: Seq[Setting[_]] = Seq(
 inThisBuild(
   List(
     organization := "io.github.cquiroz",
+    version := "1.5.1",
     homepage     := Some(url("https://github.com/cquiroz/scala-java-locales")),
     licenses     := Seq("BSD 3-Clause License" -> url("https://opensource.org/licenses/BSD-3-Clause")),
     developers   := List(
